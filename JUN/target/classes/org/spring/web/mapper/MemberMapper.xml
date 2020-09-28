@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.spring.web.mapper.MemberMapper">
+
+	<insert id="createMember"
+		parameterType="org.spring.web.vo.MemberVO">
+		insert into tbl_member(userid,userpw,username,email)
+		values(#{userid},#{userpw},#{username},#{email})
+	</insert>
+
+	<select id="memberRead" resultType="org.spring.web.vo.MemberVO">
+		select * from tbl_member
+		where userid=#{userid}
+	</select>
+
+	<update id="updateMember">
+		UPDATE tbl_member SET userpw=#{userpw} ,
+		username=#{username} , email=#{email},
+		updatedate=now() WHERE
+		userid=#{userid}
+	</update>
+
+	<delete id="deleteMember">
+		DELETE FROM tbl_member WHERE userid=#{userid};
+	</delete>
+	
+	<select id="login" resultType="org.spring.web.vo.MemberVO">
+		select userid,username from
+		tbl_member where userid = #{userid} and
+		userpw=#{userpw}
+	</select>
+
+	<select id="idCheck" resultType="String">
+		select userid from tbl_member
+		where userid = #{userid}
+	</select>
+</mapper>

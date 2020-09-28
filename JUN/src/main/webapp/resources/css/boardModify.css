@@ -1,0 +1,68 @@
+@charset "UTF-8";
+#board_wrap {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#board {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#board h2 {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#titleinput {
+    width: 392px;
+  
+}
+
+#board table .italic {
+    font-style: italic;
+}
+
+#board table b {
+    font-weight: bold;
+}
+
+#board table tr {
+    border-bottom: 1px solid gray;
+}
+#board table tr:nth-child(2){
+	border: none;
+}
+#board table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#board table tr:nth-child(1) td,
+#board table tr:nth-child(4) td {
+    padding: 10px 0;
+}
+#board table tr:nth-child(2) td{
+	padding-top:10px;
+}
+#board table tr:nth-child(3) td{
+	padding-bottom: 10px;
+}
+
+#board table td:nth-child(2) {
+    width: 400px;
+}
+
+.editorDIV {
+    width: 398px;
+    height: 200px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.editorDIV i {
+    font-style: italic;
+}
